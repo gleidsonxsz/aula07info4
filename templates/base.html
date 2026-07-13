@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cursos FICs</title>
+  <link rel="stylesheet" href="{% static 'assets/css/styles.css' %}">
+  {% block estilo %}
+  {% endblock %}
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">Cursos FICs</a>
+      <nav class="nav">
+        <a href="{% url 'index' %}">Início</a>
+        <a href="{% url 'cursos' %}">Cursos</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <div class="header-actions">
+        <a href="{% url 'login' %}" class="btn btn-outline">Login</a>
+        <a href="cadastro.html" class="btn btn-primary">Cadastro</a>
+      </div>
+      <button class="hamburger" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="index.html">Início</a>
+      <a href="cursos.html">Cursos</a>
+      <a href="#contato">Contato</a>
+      <a href="login.html">Login</a>
+      <a href="cadastro.html">Cadastro</a>
+    </nav>
+  </header>
+
+  {% block conteudo %} 
+  {% endblock %}
+
+  <footer class="footer" id="contato">
+    <div class="container">
+      <p>&copy; 2026 Cursos FICs &middot; IFRN</p>
+    </div>
+  </footer>
+
+  <script src="{% static 'assets/js/script.js' %}"></script>
+</body>
+</html>
