@@ -23,4 +23,5 @@ urlpatterns = [
     path('', index, name='index'),
     path('cursos/', cursos, name='cursos'),
     path('login/', login, name='login'),
+    path('cadastro/', cadastro, name='cadastro'),
 ]

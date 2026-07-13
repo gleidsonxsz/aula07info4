@@ -21,18 +21,18 @@
       </nav>
       <div class="header-actions">
         <a href="{% url 'login' %}" class="btn btn-outline">Login</a>
-        <a href="cadastro.html" class="btn btn-primary">Cadastro</a>
+        <a href="{% url 'cadastro' %}" class="btn btn-primary">Cadastro</a>
       </div>
       <button class="hamburger" aria-label="Abrir menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
     <nav class="mobile-nav">
-      <a href="index.html">Início</a>
-      <a href="cursos.html">Cursos</a>
+      <a href="{% url 'index' %}">Início</a>
+      <a href="{% url 'cursos' %}">Cursos</a>
       <a href="#contato">Contato</a>
-      <a href="login.html">Login</a>
-      <a href="cadastro.html">Cadastro</a>
+      <a href="{% url 'login' %}">Login</a>
+      <a href="{% url 'cadastro' %}">Cadastro</a>
     </nav>
   </header>
 
